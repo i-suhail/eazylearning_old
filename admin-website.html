@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Management | Easy Learning</title>
+  <meta name="description" content="Easy Learning admin website management frontend UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-panel-body">
+  <aside class="admin-panel-sidebar">
+    <a href="admin-dashboard.html" class="admin-panel-logo"><img src="assets/images/logo-footer.png" alt="Easy Learning"><span>Admin Panel</span></a>
+    <nav class="admin-panel-nav" aria-label="Admin navigation">
+      <a href="admin-dashboard.html"><span>⌂</span>Dashboard</a>
+      <a href="admin-courses.html"><span>▤</span>Manage Courses & Classes</a>
+      <a href="admin-enrollments.html"><span>♙</span>Manage Enrollments</a>
+      <a href="admin-study-materials.html"><span>▧</span>Manage Study Materials</a>
+      <a class="active" href="admin-website.html"><span>◎</span>Website Management</a>
+      <a class="admin-panel-logout" href="admin-login.html"><span>↪</span>Logout</a>
+    </nav>
+  </aside>
+
+  <div class="admin-panel-page">
+    <header class="admin-panel-topbar"><button class="admin-sidebar-toggle" type="button" aria-label="Open admin menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="admin-top-links"><a href="index.html">Public Pages</a><a href="admin-dashboard.html">Dashboard</a></nav><div class="admin-user-chip"><span></span><div><strong>Welcome, Admin</strong><small>Administrator</small></div></div></header>
+    <main class="admin-panel-main">
+      <section class="admin-page-heading"><h1>Website Management</h1><p>Dashboard › Website Management</p></section>
+
+      <section class="admin-stat-grid admin-three website-stat-row">
+        <article><span class="purple">GI</span><div><p>Gallery Images</p><h2>48</h2><a href="#gallerySection">View All →</a></div></article>
+        <article><span class="green">TS</span><div><p>Testimonials</p><h2>26</h2><a href="#testimonialSection">View All →</a></div></article>
+        <article><span class="blue">PM</span><div><p>Payment Methods</p><h2>3</h2><a href="#paymentSection">View All →</a></div></article>
+      </section>
+
+      <section class="admin-panel-card website-tabs-card">
+        <nav class="website-tab-nav" aria-label="Website management sections">
+          <a href="#contactSection" class="active">Contact Details</a>
+          <a href="#paymentSection">Payment Methods</a>
+          <a href="#gallerySection">Gallery</a>
+          <a href="#testimonialSection">Testimonials</a>
+          <a href="#socialSection">Social Media</a>
+        </nav>
+
+        <div class="website-management-grid">
+          <article class="website-edit-card" id="contactSection">
+            <div class="admin-card-heading"><div><h2>Contact Details</h2><p>Update institute contact information.</p></div><button class="website-edit-toggle" type="button">✎ Edit</button></div>
+            <form class="website-form" data-editable-form>
+              <label>Primary Phone Number<input value="+91 98765 43210" readonly></label>
+              <label>Secondary Phone Number<input value="+91 91234 56789" readonly></label>
+              <label>Email Address<input value="info@eazylearning.co" readonly></label>
+              <label>Support Email<input value="support@eazylearning.co" readonly></label>
+              <label>WhatsApp Number<input value="+91 98765 43210" readonly></label>
+              <label>Working Hours<input value="Mon - Sat: 8:00 AM - 8:00 PM" readonly></label>
+              <label class="full">Address<input value="123, Education Street, Near City Center, Chennai, Tamil Nadu" readonly></label>
+              <label class="full">Google Maps Link<input value="https://maps.google.com/?cid=1234567890" readonly></label>
+              <div class="website-edit-actions"><button type="button" class="primary">Save Changes</button><button type="button" class="discard">Discard</button></div>
+            </form>
+          </article>
+
+          <article class="website-edit-card" id="paymentSection">
+            <div class="admin-card-heading"><div><h2>Payment Methods</h2><p>Manage payment options shown on the fee page.</p></div><button class="website-edit-toggle" type="button">✎ Edit</button></div>
+            <table class="admin-table website-mini-table"><thead><tr><th>Method</th><th>Details</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>UPI ID</td><td>eazylearning@upi</td><td><span class="admin-badge green">Active</span></td><td><button class="admin-icon-btn edit" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr><tr><td>Bank Transfer</td><td>HDFC Bank<br>A/C No. 50100234567890<br>IFSC: HDFC0001234</td><td><span class="admin-badge green">Active</span></td><td><button class="admin-icon-btn edit" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr><tr><td>QR Code</td><td>QR image placeholder</td><td><span class="admin-badge green">Active</span></td><td><button class="admin-icon-btn edit" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr></tbody></table>
+            <form class="website-form payment-note" data-editable-form><label class="full">Payment Instructions<textarea readonly>After payment, please share the screenshot on WhatsApp so we can confirm enrollment.</textarea></label><div class="website-edit-actions"><button type="button" class="primary">Save Changes</button><button type="button" class="discard">Discard</button></div></form>
+          </article>
+        </div>
+      </section>
+
+      <section class="website-lower-grid">
+        <article class="admin-panel-card website-gallery-card" id="gallerySection">
+          <div class="admin-card-heading"><div><h2>Gallery Images</h2><p>Manage gallery images displayed on the website.</p></div><a href="gallery.html">View All</a></div>
+          <div class="gallery-admin-grid"><figure><div>Image</div><figcaption>Classroom Session</figcaption><button>Upload</button><button>Edit</button><button class="delete">Delete</button></figure><figure><div>Image</div><figcaption>Student Group</figcaption><button>Upload</button><button>Edit</button><button class="delete">Delete</button></figure><figure><div>Image</div><figcaption>Online Learning</figcaption><button>Upload</button><button>Edit</button><button class="delete">Delete</button></figure><figure><div>Image</div><figcaption>Study Area</figcaption><button>Upload</button><button>Edit</button><button class="delete">Delete</button></figure></div>
+          <button class="admin-add-btn" type="button">+ Upload New Image</button>
+        </article>
+
+        <article class="admin-panel-card website-testimonial-card" id="testimonialSection">
+          <div class="admin-card-heading"><div><h2>Testimonials</h2><p>Manage student and parent reviews.</p></div><button class="admin-add-btn" type="button">+ Add Testimonial</button></div>
+          <table class="admin-table website-mini-table"><thead><tr><th>Name</th><th>Review</th><th>Rating</th><th>Action</th></tr></thead><tbody><tr><td>Ayesha Khan</td><td>Excellent teaching and personal attention.</td><td>★★★★★</td><td><button class="admin-icon-btn edit" type="button">✎</button><button class="admin-icon-btn delete" type="button">⌫</button></td></tr><tr><td>Vikram Singh</td><td>Very good faculty and structured classes.</td><td>★★★★★</td><td><button class="admin-icon-btn edit" type="button">✎</button><button class="admin-icon-btn delete" type="button">⌫</button></td></tr><tr><td>Neha Verma</td><td>The notes and study material are helpful.</td><td>★★★★★</td><td><button class="admin-icon-btn edit" type="button">✎</button><button class="admin-icon-btn delete" type="button">⌫</button></td></tr></tbody></table>
+        </article>
+
+        <article class="admin-panel-card website-social-card" id="socialSection">
+          <div class="admin-card-heading"><div><h2>Social Media</h2><p>Update social media links.</p></div><button class="website-edit-toggle" type="button">✎ Edit</button></div>
+          <form class="website-form social-form" data-editable-form><label>Facebook<input value="https://facebook.com/eazylearning" readonly></label><label>Instagram<input value="https://instagram.com/eazylearning" readonly></label><label>LinkedIn<input value="https://linkedin.com/company/eazylearning" readonly></label><label>YouTube<input value="https://youtube.com/@eazylearning" readonly></label><div class="website-edit-actions"><button type="button" class="primary">Save Changes</button><button type="button" class="discard">Discard</button></div></form>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

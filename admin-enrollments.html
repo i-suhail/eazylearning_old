@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Enrollments | Easy Learning</title>
+  <meta name="description" content="Easy Learning admin enrollment management frontend UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-panel-body">
+  <aside class="admin-panel-sidebar">
+    <a href="admin-dashboard.html" class="admin-panel-logo"><img src="assets/images/logo-footer.png" alt="Easy Learning"><span>Admin Panel</span></a>
+    <nav class="admin-panel-nav" aria-label="Admin navigation">
+      <a href="admin-dashboard.html"><span>⌂</span>Dashboard</a>
+      <a href="admin-courses.html"><span>▤</span>Manage Courses & Classes</a>
+      <a class="active" href="admin-enrollments.html"><span>♙</span>Manage Enrollments</a>
+      <a href="admin-study-materials.html"><span>▧</span>Manage Study Materials</a>
+      <a href="admin-website.html"><span>◎</span>Website Management</a>
+      <a class="admin-panel-logout" href="admin-login.html"><span>↪</span>Logout</a>
+    </nav>
+  </aside>
+
+  <div class="admin-panel-page">
+    <header class="admin-panel-topbar"><button class="admin-sidebar-toggle" type="button" aria-label="Open admin menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="admin-top-links"><a href="index.html">Public Pages</a><a href="admin-dashboard.html">Dashboard</a></nav><div class="admin-user-chip"><span></span><div><strong>Welcome, Admin</strong><small>Administrator</small></div></div></header>
+    <main class="admin-panel-main">
+      <section class="admin-page-heading"><h1>Manage Enrollments</h1><p>Dashboard › Manage Enrollments</p></section>
+
+      <section class="admin-stat-grid">
+        <article><span class="purple">TE</span><div><p>Total Enrollments</p><h2>248</h2><a href="#">View Details →</a></div></article>
+        <article><span class="orange">PA</span><div><p>Pending Approvals</p><h2>37</h2><a href="#">View Details →</a></div></article>
+        <article><span class="green">AS</span><div><p>Approved Students</p><h2>186</h2><a href="#">View Details →</a></div></article>
+        <article><span class="blue">DR</span><div><p>Demo Requests</p><h2>25</h2><a href="#">View Details →</a></div></article>
+      </section>
+
+      <section class="admin-panel-card admin-filter-panel">
+        <label>Search Student<input type="search" placeholder="Search by student or parent name..."></label>
+        <label>Curriculum<select><option>All Curriculums</option><option>CBSE</option><option>ICSE</option><option>IGCSE</option></select></label>
+        <label>Class<select><option>All Classes</option><option>Class 8</option><option>Class 9</option><option>Class 10</option></select></label>
+        <label>Learning Mode<select><option>All Modes</option><option>Online</option><option>Offline</option><option>Individual</option></select></label>
+        <label>Status<select><option>All Status</option><option>Pending</option><option>Approved</option><option>Rejected</option><option>Demo Scheduled</option></select></label>
+        <div class="admin-filter-actions"><button type="button">Reset</button><button type="button" class="primary">Filter</button></div>
+      </section>
+
+      <section class="admin-panel-card admin-table-card admin-wide-table">
+        <div class="admin-card-heading"><h2>Enrollment List</h2><button class="admin-export-btn" type="button">Export</button></div>
+        <table class="admin-table"><thead><tr><th>#</th><th>Student Name</th><th>Parent Name</th><th>Curriculum</th><th>Class</th><th>Subjects</th><th>Learning Mode</th><th>Contact Number</th><th>Enrollment Date</th><th>Status</th><th>View</th><th>Edit</th><th>Delete</th></tr></thead><tbody>
+          <tr><td>1</td><td>Aarav Sharma</td><td>Rajesh Sharma</td><td>CBSE</td><td>Class 10</td><td>Mathematics, Science, English</td><td>Online</td><td>+91 98765 43210</td><td>27 May 2024</td><td><select class="admin-status-select pending"><option>Pending</option><option>Approved</option><option>Rejected</option><option>Demo Scheduled</option></select></td><td><button class="admin-icon-btn view admin-open-modal" data-modal="enrollmentViewModal" type="button" aria-label="View">⌕</button></td><td><button class="admin-icon-btn edit admin-open-modal" data-modal="enrollmentEditModal" type="button" aria-label="Edit">✎</button></td><td><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>2</td><td>Myra Iyer</td><td>Suresh Iyer</td><td>ICSE</td><td>Class 9</td><td>Mathematics, Science, English</td><td>Offline</td><td>+91 91234 56789</td><td>26 May 2024</td><td><select class="admin-status-select approved"><option>Approved</option><option>Pending</option><option>Rejected</option><option>Demo Scheduled</option></select></td><td><button class="admin-icon-btn view admin-open-modal" data-modal="enrollmentViewModal" type="button" aria-label="View">⌕</button></td><td><button class="admin-icon-btn edit admin-open-modal" data-modal="enrollmentEditModal" type="button" aria-label="Edit">✎</button></td><td><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>3</td><td>Rohan Verma</td><td>Amit Verma</td><td>CBSE</td><td>Class 8</td><td>Science, Mathematics</td><td>Online</td><td>+91 99887 66554</td><td>25 May 2024</td><td><select class="admin-status-select pending"><option>Pending</option><option>Approved</option><option>Rejected</option><option>Demo Scheduled</option></select></td><td><button class="admin-icon-btn view admin-open-modal" data-modal="enrollmentViewModal" type="button" aria-label="View">⌕</button></td><td><button class="admin-icon-btn edit admin-open-modal" data-modal="enrollmentEditModal" type="button" aria-label="Edit">✎</button></td><td><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>4</td><td>Sara Khan</td><td>Imran Khan</td><td>IGCSE</td><td>Class 10</td><td>Mathematics, Physics, Chemistry</td><td>Individual</td><td>+91 87654 32109</td><td>24 May 2024</td><td><select class="admin-status-select demo"><option>Demo Scheduled</option><option>Pending</option><option>Approved</option><option>Rejected</option></select></td><td><button class="admin-icon-btn view admin-open-modal" data-modal="enrollmentViewModal" type="button" aria-label="View">⌕</button></td><td><button class="admin-icon-btn edit admin-open-modal" data-modal="enrollmentEditModal" type="button" aria-label="Edit">✎</button></td><td><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>5</td><td>Vivaan Patel</td><td>Mehul Patel</td><td>State Board</td><td>Class 11</td><td>Physics, Chemistry, Mathematics</td><td>Offline</td><td>+91 96969 11223</td><td>23 May 2024</td><td><select class="admin-status-select approved"><option>Approved</option><option>Pending</option><option>Rejected</option><option>Demo Scheduled</option></select></td><td><button class="admin-icon-btn view admin-open-modal" data-modal="enrollmentViewModal" type="button" aria-label="View">⌕</button></td><td><button class="admin-icon-btn edit admin-open-modal" data-modal="enrollmentEditModal" type="button" aria-label="Edit">✎</button></td><td><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+        </tbody></table>
+        <div class="admin-table-footer"><span>Showing 1 to 5 of 248 entries</span><div><button>‹</button><button class="active">1</button><button>2</button><button>3</button><button>›</button></div></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="admin-modal" id="enrollmentViewModal" hidden><div class="admin-modal-box"><button class="admin-modal-close" type="button" aria-label="Close">×</button><h2>Enrollment Details</h2><dl class="admin-detail-grid"><div><dt>Student</dt><dd>Aarav Sharma</dd></div><div><dt>Parent</dt><dd>Rajesh Sharma</dd></div><div><dt>Curriculum</dt><dd>CBSE</dd></div><div><dt>Class</dt><dd>Class 10</dd></div><div><dt>Subjects</dt><dd>Mathematics, Science, English</dd></div><div><dt>Learning Mode</dt><dd>Online</dd></div><div><dt>Phone</dt><dd>+91 98765 43210</dd></div><div><dt>Status</dt><dd>Pending</dd></div></dl></div></div>
+  <div class="admin-modal" id="enrollmentEditModal" hidden><div class="admin-modal-box"><button class="admin-modal-close" type="button" aria-label="Close">×</button><h2>Edit Enrollment</h2><form class="admin-modal-form"><label>Student Name<input value="Aarav Sharma"></label><label>Parent Name<input value="Rajesh Sharma"></label><label>Curriculum<select><option>CBSE</option><option>ICSE</option></select></label><label>Class<select><option>Class 10</option><option>Class 9</option></select></label><label>Learning Mode<select><option>Online</option><option>Offline</option></select></label><label>Status<select><option>Pending</option><option>Approved</option><option>Rejected</option><option>Demo Scheduled</option></select></label><button type="button" class="primary">Save Changes</button></form></div></div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

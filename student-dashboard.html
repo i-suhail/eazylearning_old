@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Easy Learning</title>
+  <meta name="description" content="Student dashboard for Easy Learning portal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="student-portal-body">
+  <aside class="student-portal-sidebar">
+    <a href="index.html" class="student-portal-logo"><img src="assets/images/logo-footer.png" alt="Easy Learning"></a>
+    <nav class="student-portal-nav" aria-label="Student portal navigation">
+      <a href="student-dashboard.html" class="active"><span>⌂</span>Dashboard</a>
+      <a href="my-courses.html"><span>□</span>My Courses</a>
+      <a href="student-study-materials.html"><span>▣</span>Study Materials</a>
+      <a href="my-profile.html"><span>○</span>My Profile</a>
+    </nav>
+    <div class="student-help-card"><strong>Need Help?</strong><p>We're here to help you!</p><a href="contact.html">Contact Support</a></div>
+  </aside>
+
+  <div class="student-portal-page">
+    <header class="student-portal-topbar"><button class="student-sidebar-toggle" type="button" aria-label="Open student menu" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html">Home Website</a>
+      <a href="student-dashboard.html" class="active">Dashboard</a>
+      <div class="student-top-actions"><div class="student-mini-profile"><span></span><div><strong>Aarav Sharma</strong><small>Class 10 • CBSE</small></div></div><a class="student-logout" href="student-login.html">Logout</a></div>
+    </header>
+
+    <main class="student-portal-main">
+      <section class="student-welcome-card">
+        <div><p>Welcome back,</p><h1>Aarav Sharma! <span>👋</span></h1><p>Keep learning, keep growing. You're doing great!</p></div>
+        <div class="student-hero-illustration">Study Desk Placeholder</div>
+      </section>
+
+      <section class="student-stat-grid">
+        <article><span>CR</span><div><p>Courses Enrolled</p><h2>5</h2><small>Active Courses</small><a href="my-courses.html">View All →</a></div></article>
+        <article><span>SM</span><div><p>Study Materials</p><h2>42</h2><small>Available Materials</small><a href="student-study-materials.html">View All →</a></div></article>
+        <article><span>LM</span><div><p>Learning Mode</p><h2>Online</h2><small>Live Interactive Classes</small></div></article>
+        <article><span>CB</span><div><p>Curriculum</p><h2>CBSE</h2><small>Class 10</small></div></article>
+      </section>
+
+      <section class="student-dashboard-grid">
+        <div class="student-panel student-courses-panel">
+          <div class="student-panel-heading"><h2>My Courses</h2><a href="my-courses.html">View All →</a></div>
+          <div class="student-course-scroll">
+            <article class="student-course-mini"><div class="course-art green">Maths</div><h3>Mathematics</h3><p>Class 10 • CBSE</p><a href="student-study-materials.html">View Course</a></article>
+            <article class="student-course-mini"><div class="course-art purple">Science</div><h3>Science</h3><p>Class 10 • CBSE</p><a href="student-study-materials.html">View Course</a></article>
+            <article class="student-course-mini"><div class="course-art gold">English</div><h3>English</h3><p>Class 10 • CBSE</p><a href="student-study-materials.html">View Course</a></article>
+            <article class="student-course-mini"><div class="course-art pink">Social</div><h3>Social Science</h3><p>Class 10 • CBSE</p><a href="student-study-materials.html">View Course</a></article>
+          </div>
+        </div>
+
+        <aside class="student-panel announcements-panel" id="announcementsPanel">
+          <div class="student-panel-heading"><h2>Latest Announcements</h2><button type="button" id="toggleAnnouncements">View All</button></div>
+          <div class="announcement-marquee">
+            <div class="announcement-track">
+              <article><span class="dot gold-dot"></span><div><strong>Holiday Notice</strong><p>No classes on 27th May 2024.</p></div><time>20 May 2024</time></article>
+              <article><span class="dot blue-dot"></span><div><strong>New Study Material Uploaded</strong><p>Mathematics - Linear Equations Notes</p></div><time>18 May 2024</time></article>
+              <article><span class="dot green-dot"></span><div><strong>Science Test Schedule</strong><p>Unit Test on 30th May 2024.</p></div><time>15 May 2024</time></article>
+              <article><span class="dot pink-dot"></span><div><strong>Parent Meeting</strong><p>Monthly review call this weekend.</p></div><time>12 May 2024</time></article>
+              <article><span class="dot gold-dot"></span><div><strong>English Practice Session</strong><p>Speaking activity at 6 PM.</p></div><time>10 May 2024</time></article>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="student-dashboard-grid lower-grid">
+        <div class="student-panel recent-materials-panel">
+          <div class="student-panel-heading"><h2>Recent Study Materials</h2><a href="student-study-materials.html">View All →</a></div>
+          <div class="recent-material-row"><article><span>PDF</span><div><strong>Linear Equations</strong><small>Mathematics • 1.2 MB</small></div><a href="student-study-materials.html">↓</a></article><article><span>PDF</span><div><strong>Chemical Reactions</strong><small>Science • 2.4 MB</small></div><a href="student-study-materials.html">↓</a></article><article><span>PDF</span><div><strong>First Flight Prose</strong><small>English • 1.8 MB</small></div><a href="student-study-materials.html">↓</a></article></div>
+        </div>
+        <div class="student-panel upcoming-panel"><div class="student-panel-heading"><h2>Upcoming Class</h2></div><div class="upcoming-class"><strong>29<br><small>MAY</small></strong><div><h3>Science - Unit Test Discussion</h3><p>10:00 AM - 11:00 AM</p><span>Live Class</span></div></div></div>
+      </section>
+
+      <section class="student-bottom-cta"><span>🏆</span><p>Great job, Aarav! Keep up the consistency and stay ahead in your learning journey.</p><a href="student-study-materials.html">Continue Learning →</a></section>
+    </main>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

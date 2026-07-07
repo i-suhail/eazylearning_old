@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Materials | Easy Learning</title>
+  <meta name="description" content="Browse Easy Learning notes, worksheets, question banks, sample papers, revision notes, and formula sheets.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="top"></div>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="index.html" class="brand brand-image" aria-label="Easy Learning home"><img src="assets/images/logo-Navbar.png" alt="Eazylearning Premium Tutoring"></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-menu">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a><a href="classes.html">Classes</a><a href="fee-structure.html">Fees</a><a href="study-materials.html" class="active">Study Materials</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="student-login.html" class="signin-link">Sign In</a><a href="enrollment.html" class="nav-cta">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="materials-hero">
+      <div class="section-shell materials-hero-inner">
+        <div class="materials-hero-copy reveal">
+          <h1>Study Materials</h1>
+          <h2>Learn. Practice. Excel.</h2>
+          <p>Access high-quality notes, worksheets, sample papers and more to strengthen your concepts and boost your learning.</p>
+          <div class="materials-points"><span>Expert Curated</span><span>Exam Focused</span><span>Curriculum Aligned</span><span>Regularly Updated</span></div>
+        </div>
+        <div class="materials-hero-art reveal" aria-label="Study materials image placeholder"><span>Hero Image Placeholder</span><small>Study materials illustration</small></div>
+      </div>
+    </section>
+
+    <section class="materials-browser section-shell">
+      <form class="materials-search reveal" role="search">
+        <label class="sr-only" for="materialSearch">Search study materials</label>
+        <input id="materialSearch" type="search" placeholder="Search for notes, worksheets, question papers...">
+        <button type="button" id="materialSearchBtn">Search</button>
+      </form>
+
+      <section class="materials-filters reveal" aria-label="Study material filters">
+        <div class="filter-grid">
+          <label>Curriculum<select id="filterCurriculum"><option value="all">All Curriculums</option><option>CBSE</option><option>ICSE</option><option>IB</option><option>IGCSE</option><option>State Board</option><option>International</option></select></label>
+          <label>Class<select id="filterClass"><option value="all">All Classes</option><option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></label>
+          <label>Subject<select id="filterSubject"><option value="all">All Subjects</option><option>Mathematics</option><option>Science</option><option>English</option><option>Social Science</option><option>Physics</option><option>Chemistry</option></select></label>
+          <label>Material Type<select id="filterType"><option value="all">All Types</option><option>Notes</option><option>Worksheets</option><option>Question Banks</option><option>Sample Papers</option><option>Revision Notes</option><option>Formula Sheets</option></select></label>
+        </div>
+        <div class="type-pills" id="typePills"><button type="button" class="is-active" data-type="all">All Materials</button><button type="button" data-type="Notes">Notes</button><button type="button" data-type="Worksheets">Worksheets</button><button type="button" data-type="Question Banks">Question Banks</button><button type="button" data-type="Sample Papers">Sample Papers</button><button type="button" data-type="Revision Notes">Revision Notes</button><button type="button" data-type="Formula Sheets">Formula Sheets</button></div>
+      </section>
+
+      <div class="materials-toolbar reveal"><p id="materialsCount">Showing 0 Results</p><label>Sort by:<select id="materialSort"><option value="latest">Latest First</option><option value="title">Title A-Z</option><option value="pages">Most Pages</option><option value="size">File Size</option></select></label></div>
+      <div class="materials-grid" id="materialsGrid" aria-live="polite"></div>
+      <nav class="materials-pagination" id="materialsPagination" aria-label="Study material pagination"></nav>
+    </section>
+
+    <section class="materials-cta section-shell reveal">
+      <div><h2>Need more help with your studies?</h2><p>Book a free demo class with our expert teachers and experience the Easy Learning difference.</p></div>
+      <a href="enrollment.html?demo=free" class="btn btn-gold">Book Free Demo</a>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="section-shell footer-grid">
+      <div><a href="index.html" class="brand footer-brand brand-image" aria-label="Easy Learning home"><img src="assets/images/logo-footer.png" alt="Eazylearning Learn Smart, Grow Bright"></a><p>Helping students build strong foundations, achieve academic excellence and become confident learners.</p><div class="social-links" aria-label="Social links"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="YouTube">yt</a><a href="https://wa.me/919876543210" aria-label="WhatsApp">wa</a></div></div>
+      <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a><a href="classes.html">Classes</a><a href="study-materials.html">Study Materials</a><a href="contact.html">Contact</a></div>
+      <div><h3>Courses</h3><a href="courses.html">School (1-5)</a><a href="courses.html">School (6-8)</a><a href="courses.html">School (9-10)</a><a href="courses.html">School (11-12)</a><a href="courses.html">Spoken English</a><a href="courses.html">Competitive Exams</a></div>
+      <div><h3>Contact Us</h3><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@eazylearning.com">hello@eazylearning.com</a><span>Chennai, Tamil Nadu</span><span>Mon to Sat: 8:00 AM - 8:00 PM</span></div>
+    </div>
+    <div class="section-shell footer-bottom"><span>&copy; 2026 Easy Learning. All rights reserved.</span><span><a href="#">Privacy Policy</a> <b>|</b> <a href="#">Terms &amp; Conditions</a></span></div>
+  </footer>
+
+  <div class="floating-actions" aria-label="Quick contact actions"><a class="float-btn whatsapp" href="https://wa.me/919876543210" aria-label="Chat on WhatsApp">WA</a><a class="float-btn call" href="tel:+919876543210" aria-label="Call Easy Learning">Call</a></div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+

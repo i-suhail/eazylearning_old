@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrollment Form | Easy Learning</title>
+  <meta name="description" content="Enroll at Easy Learning with a simple multi-step frontend form for student, parent, and academic details.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="top"></div>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a href="index.html" class="brand brand-image" aria-label="Easy Learning home">
+        <img src="assets/images/logo-Navbar.png" alt="Eazylearning Premium Tutoring">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="classes.html">Classes</a>
+        <a href="fee-structure.html">Fees</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="student-login.html" class="signin-link">Sign In</a>
+        <a href="enrollment.html" class="nav-cta active">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="enrollment-hero section-shell">
+      <div class="reveal">
+        <span class="eyebrow">Enrollment</span>
+        <h1>Enrollment Form</h1>
+        <p>Fill in the details below to enroll in our programmes. Selected course details are pre-filled when you arrive from Courses or Classes.</p>
+      </div>
+      <div class="enrollment-hero-icon reveal">🎓</div>
+    </section>
+
+    <section class="enrollment-shell section-shell">
+      <form class="enrollment-form reveal" id="enrollmentForm" action="#" method="post">
+        <div class="enrollment-progress" aria-label="Enrollment steps">
+          <button class="progress-step is-active" type="button" data-step-target="1"><span>1</span> Student Details</button>
+          <button class="progress-step" type="button" data-step-target="2"><span>2</span> Parent Details</button>
+          <button class="progress-step" type="button" data-step-target="3"><span>3</span> Academic Details</button>
+          <button class="progress-step" type="button" data-step-target="4"><span>4</span> Review & Submit</button>
+        </div>
+
+        <div class="enrollment-layout">
+          <div class="enrollment-main">
+            <fieldset class="form-step is-active" data-step="1">
+              <legend><span>1</span> Student Details</legend>
+              <div class="form-grid two-cols">
+                <label>Full Name <small>*</small><input type="text" name="studentName" placeholder="Student's full name" required></label>
+                <label>Date of Birth <small>*</small><input type="date" name="dob" required></label>
+                <label>Gender <small>*</small>
+                  <select name="gender" required>
+                    <option value="">Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+                <label>School Name <small>*</small><input type="text" name="school" placeholder="School name" required></label>
+                <label>Current Class <small>*</small>
+                  <select id="enrollClass" name="class" required>
+                    <option value="">Select class</option>
+                    <option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option>
+                    <option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option>
+                    <option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option>
+                  </select>
+                </label>
+                <label>City <small>*</small><input type="text" name="city" placeholder="Your city" required></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="2">
+              <legend><span>2</span> Parent / Guardian Details</legend>
+              <div class="form-grid two-cols">
+                <label>Parent / Guardian Name <small>*</small><input type="text" name="parentName" required></label>
+                <label>Relationship <small>*</small>
+                  <select name="relationship" required>
+                    <option value="">Select</option>
+                    <option>Father</option>
+                    <option>Mother</option>
+                    <option>Guardian</option>
+                  </select>
+                </label>
+                <label>Mobile Number <small>*</small><input type="tel" name="mobile" placeholder="10-digit mobile" required></label>
+                <label>WhatsApp Number <input type="tel" name="whatsapp" placeholder="10-digit WhatsApp"></label>
+                <label class="full-span">Email Address <input type="email" name="email" placeholder="you@example.com"></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="3">
+              <legend><span>3</span> Academic Details</legend>
+              <div class="form-grid two-cols">
+                <label>Curriculum
+                  <select id="enrollCurriculum" name="curriculum">
+                    <option value="">Select curriculum</option>
+                    <option>CBSE</option>
+                    <option>ICSE</option>
+                    <option>IB</option>
+                    <option>Cambridge IGCSE</option>
+                    <option>State Board</option>
+                    <option>International Curriculum</option>
+                  </select>
+                </label>
+                <label>Learning Mode
+                  <select id="enrollLearningMode" name="learningMode">
+                    <option value="">Select mode</option>
+                    <option>Online Classes</option>
+                    <option>Offline Classes</option>
+                    <option>Individual Tuition</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="subject-picker" id="subjectPicker">
+                <p>Choose Subjects <small>*</small></p>
+                <label><input type="checkbox" name="subjects" value="Mathematics" data-fee="1499"> <span>Mathematics <b>₹1,499/mo</b></span></label>
+                <label><input type="checkbox" name="subjects" value="Science" data-fee="1499"> <span>Science <b>₹1,499/mo</b></span></label>
+                <label><input type="checkbox" name="subjects" value="English" data-fee="1299"> <span>English <b>₹1,299/mo</b></span></label>
+                <label><input type="checkbox" name="subjects" value="Social Science" data-fee="1299"> <span>Social Science <b>₹1,299/mo</b></span></label>
+                <label><input type="checkbox" name="subjects" value="Computer Applications" data-fee="1299"> <span>Computer Applications <b>₹1,299/mo</b></span></label>
+                <label><input type="checkbox" name="subjects" value="Spoken English" data-fee="1299"> <span>Spoken English <b>₹1,299/mo</b></span></label>
+              </div>
+
+              <div class="form-grid two-cols">
+                <label>Preferred Batch Time <small>*</small>
+                  <select name="batchTime" required>
+                    <option value="">Select a slot</option>
+                    <option>6:00 AM - 7:30 AM</option>
+                    <option>4:30 PM - 6:00 PM</option>
+                    <option>6:00 PM - 7:30 PM</option>
+                    <option>7:30 PM - 9:00 PM</option>
+                  </select>
+                </label>
+                <label>Preferred Start Date <small>*</small><input type="date" name="startDate" required></label>
+                <label class="full-span">Message<textarea name="message" rows="4" placeholder="Tell us anything we should know"></textarea></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-step" data-step="4">
+              <legend><span>4</span> Review & Submit</legend>
+              <div class="review-card">
+                <h2>Review your enrollment</h2>
+                <p>Please check the summary on the right. This is a frontend-only form for now; final submission will be connected later.</p>
+                <div class="confirmation-box" id="confirmationBox" hidden>
+                  Enrollment details captured on screen. Our team will contact you to confirm the next step.
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-navigation">
+              <button class="btn btn-secondary" id="prevStep" type="button">Previous</button>
+              <button class="btn btn-primary" id="nextStep" type="button">Continue</button>
+              <button class="btn btn-gold" id="submitEnrollment" type="submit" hidden>Submit Enrollment</button>
+            </div>
+          </div>
+
+          <aside class="enrollment-sidebar">
+            <div class="summary-card">
+              <h2>Your Enrollment Summary</h2>
+              <dl>
+                <div><dt>Class</dt><dd id="summaryClass">Not selected</dd></div>
+                <div><dt>Curriculum</dt><dd id="summaryCurriculum">Not selected</dd></div>
+                <div><dt>Learning Mode</dt><dd id="summaryMode">Not selected</dd></div>
+                <div><dt>Batch Time</dt><dd id="summaryBatch">Not selected</dd></div>
+              </dl>
+              <h3>Selected Subjects (<span id="summarySubjectCount">0</span>)</h3>
+              <div class="summary-subjects" id="summarySubjects"><span>No subjects selected</span></div>
+              <div class="summary-total">
+                <span>Total Fee (Monthly)</span>
+                <strong id="summaryTotal">₹0</strong>
+              </div>
+            </div>
+
+            <div class="help-card">
+              <h3>What's next?</h3>
+              <p>Our team will contact you within 24 hours to confirm your enrollment and schedule your first class.</p>
+            </div>
+
+            <div class="help-card">
+              <h3>Need help?</h3>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+              <p>Mon - Sat, 8:00 AM - 8:00 PM</p>
+            </div>
+          </aside>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="section-shell footer-grid">
+      <div>
+        <a href="index.html" class="brand footer-brand brand-image" aria-label="Easy Learning home">
+          <img src="assets/images/logo-footer.png" alt="Eazylearning Learn Smart, Grow Bright">
+        </a>
+        <p>Helping students build strong foundations, achieve academic excellence and become confident learners.</p>
+        <div class="social-links" aria-label="Social links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+          <a href="https://wa.me/919876543210" aria-label="WhatsApp">wa</a>
+        </div>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="classes.html">Classes</a>
+        <a href="study-materials.html">Study Materials</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Courses</h3>
+        <a href="courses.html">School (1-5)</a>
+        <a href="courses.html">School (6-8)</a>
+        <a href="courses.html">School (9-10)</a>
+        <a href="courses.html">School (11-12)</a>
+        <a href="courses.html">Spoken English</a>
+        <a href="courses.html">Competitive Exams</a>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+        <a href="mailto:hello@eazylearning.com">hello@eazylearning.com</a>
+        <span>Chennai, Tamil Nadu</span>
+        <span>Mon to Sat: 8:00 AM - 8:00 PM</span>
+      </div>
+    </div>
+    <div class="section-shell footer-bottom">
+      <span>&copy; 2026 Easy Learning. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> <b>|</b> <a href="#">Terms &amp; Conditions</a></span>
+    </div>
+  </footer>
+
+  <div class="floating-actions" aria-label="Quick contact actions">
+    <a class="float-btn whatsapp" href="https://wa.me/919876543210" aria-label="Chat on WhatsApp">WA</a>
+    <a class="float-btn call" href="tel:+919876543210" aria-label="Call Easy Learning">Call</a>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Sign Up | Easy Learning</title>
+  <meta name="description" content="Create an Easy Learning student portal account frontend UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="login-body signup-body">
+  <main class="login-page student-signup-page">
+    <section class="login-shell signup-shell reveal">
+      <a href="index.html" class="login-brand" aria-label="Easy Learning home"><img src="assets/images/logo-Navbar.png" alt="Eazylearning Premium Tutoring"></a>
+
+      <div class="login-card signup-card">
+        <span class="eyebrow">Student Portal</span>
+        <h1>Create your account</h1>
+        <p>Join Easy Learning and start your learning journey today.</p>
+
+        <form class="portal-login-form signup-form" action="student-dashboard.html" method="get">
+          <label>Email Address <small>*</small><input type="email" name="email" placeholder="Enter your email address" required></label>
+          <label>Verify Code <small>*</small><span class="code-input-row"><input type="text" name="code" placeholder="Enter 6-digit code" required><button type="button">Send Code</button></span><em>A 6-digit verification code will be sent to your email.</em></label>
+          <div class="password-fields" data-password-fields>
+            <label>Password <small>*</small><input type="password" name="password" placeholder="Enter your password" required></label>
+            <label>Confirm Password <small>*</small><input type="password" name="confirm_password" placeholder="Confirm your password" required></label>
+          </div>
+          <button class="btn btn-primary" type="submit">Sign Up</button>
+        </form>
+
+        <div class="signup-divider"><span></span><b>OR</b><span></span></div>
+        <button class="google-signup-btn" type="button" data-google-signup><strong>G</strong> Continue with Google</button>
+        <div class="login-footnote"><span>Already have an account?</span><a href="student-login.html">Sign In</a></div>
+      </div>
+
+      <div class="login-side-panel signup-side-panel">
+        <h2>Everything you need for smarter study.</h2>
+        <ul><li>My Courses</li><li>Study Materials</li><li>Downloads</li><li>Announcements</li><li>Profile</li></ul>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

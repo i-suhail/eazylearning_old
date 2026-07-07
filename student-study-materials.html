@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Materials | Easy Learning</title>
+  <meta name="description" content="Student portal study materials and downloads page for Easy Learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="student-portal-body">
+  <aside class="student-portal-sidebar">
+    <a href="index.html" class="student-portal-logo"><img src="assets/images/logo-footer.png" alt="Easy Learning"></a>
+    <nav class="student-portal-nav" aria-label="Student portal navigation"><a href="student-dashboard.html"><span>⌂</span>Dashboard</a><a href="my-courses.html"><span>□</span>My Courses</a><a href="student-study-materials.html" class="active"><span>▣</span>Study Materials</a><a href="my-profile.html"><span>○</span>My Profile</a></nav>
+    <div class="student-help-card"><strong>Need Help?</strong><p>Our team is here to support you.</p><a href="contact.html">Contact Institute</a></div>
+  </aside>
+
+  <div class="student-portal-page">
+    <header class="student-portal-topbar"><button class="student-sidebar-toggle" type="button" aria-label="Open student menu" aria-expanded="false"><span></span><span></span><span></span></button><a href="index.html">Home Website</a><a href="student-dashboard.html">Dashboard</a><div class="student-top-actions"><div class="student-mini-profile"><span></span><div><strong>Aarav Sharma</strong><small>Class 10 • CBSE</small></div></div><a class="student-logout" href="student-login.html">Logout</a></div></header>
+
+    <main class="student-portal-main">
+      <section class="student-page-title materials-portal-title"><div><p>Dashboard › Study Materials</p><h1>Study Materials</h1><span>Access all your study materials, notes, worksheets and more in one place.</span></div><div class="student-title-illustration">Notes Folder Placeholder</div></section>
+
+      <section class="portal-material-filters student-panel">
+        <input id="studentMaterialSearch" type="search" placeholder="Search materials by title, subject, topic...">
+        <div class="portal-filter-grid"><label>Curriculum<select id="studentFilterCurriculum"><option value="all">All Curriculum</option><option>CBSE</option><option>ICSE</option></select></label><label>Class<select id="studentFilterClass"><option value="all">All Classes</option><option>Class 10</option></select></label><label>Subject<select id="studentFilterSubject"><option value="all">All Subjects</option><option>Mathematics</option><option>Science</option><option>English</option><option>Social Science</option><option>Computer Science</option><option>Biology</option></select></label><label>Material Type<select id="studentFilterType"><option value="all">All Types</option><option>Notes</option><option>Worksheet</option><option>Question Bank</option></select></label></div>
+      </section>
+
+      <section class="portal-subject-strip"><article><span class="course-art purple">Math</span><div><h3>Mathematics</h3><p>24 Materials</p></div></article><article><span class="course-art green">Sci</span><div><h3>Science</h3><p>18 Materials</p></div></article><article><span class="course-art gold">Eng</span><div><h3>English</h3><p>16 Materials</p></div></article><article><span class="course-art pink">SST</span><div><h3>Social Science</h3><p>12 Materials</p></div></article><article><span class="course-art blue">CS</span><div><h3>Computer Science</h3><p>10 Materials</p></div></article></section>
+
+      <section class="student-panel portal-materials-panel">
+        <div class="student-panel-heading"><h2>Available Study Materials</h2><label>Sort by:<select><option>Latest First</option><option>Title A-Z</option></select></label></div>
+        <div class="portal-material-grid">
+          <article class="portal-material-card"><div class="material-art purple"><b>PDF</b></div><h3>Linear Equations in Two Variables</h3><p>Mathematics • Class 10 • CBSE</p><span>Notes</span><div><small>18 Pages</small><small>1.2 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art green"><b>PDF</b></div><h3>Chemical Reactions and Equations</h3><p>Science • Class 10 • CBSE</p><span>Notes</span><div><small>24 Pages</small><small>1.8 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art gold"><b>PDF</b></div><h3>First Flight - Prose Chapter 1</h3><p>English • Class 10 • CBSE</p><span>Notes</span><div><small>15 Pages</small><small>1.1 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art pink"><b>PDF</b></div><h3>Resources and Development</h3><p>Social Science • Class 10 • CBSE</p><span>Notes</span><div><small>15 Pages</small><small>1.0 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art blue"><b>PDF</b></div><h3>Python Basics - Introduction</h3><p>Computer Science • Class 10 • CBSE</p><span>Notes</span><div><small>18 Pages</small><small>1.5 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art green"><b>PDF</b></div><h3>Life Processes</h3><p>Biology • Class 10 • CBSE</p><span>Notes</span><div><small>22 Pages</small><small>1.6 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art purple"><b>PDF</b></div><h3>Acids, Bases and Salts</h3><p>Science • Class 10 • CBSE</p><span>Notes</span><div><small>19 Pages</small><small>1.3 MB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+          <article class="portal-material-card"><div class="material-art blue"><b>PDF</b></div><h3>Quadratic Equations</h3><p>Mathematics • Class 10 • CBSE</p><span>Worksheet</span><div><small>12 Pages</small><small>950 KB</small></div><div><a href="#" target="_blank">Preview</a><a href="#" download>Download</a></div></article>
+        </div>
+        <button class="show-more-materials" type="button">Show More Materials⌄</button>
+      </section>
+
+      <section class="student-panel downloaded-panel">
+        <div class="student-panel-heading"><div><h2>Downloaded Materials</h2><p>Your recently downloaded study materials</p></div></div>
+        <table class="portal-download-table">
+          <thead><tr><th>Material Name</th><th>Subject</th><th>Type</th><th>Downloaded On</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><a href="#" target="_blank">Linear Equations in Two Variables.pdf<br><small>1.2 MB</small></a></td><td>Mathematics</td><td><span>Notes</span></td><td>18 May 2024</td><td><a href="#" target="_blank">Preview</a></td></tr>
+            <tr><td><a href="#" target="_blank">Chemical Reactions and Equations.pdf<br><small>1.8 MB</small></a></td><td>Science</td><td><span>Notes</span></td><td>17 May 2024</td><td><a href="#" target="_blank">Preview</a></td></tr>
+            <tr><td><a href="#" target="_blank">First Flight - Prose Chapter 1.pdf<br><small>1.1 MB</small></a></td><td>English</td><td><span>Notes</span></td><td>17 May 2024</td><td><a href="#" target="_blank">Preview</a></td></tr>
+            <tr><td><a href="#" target="_blank">Resources and Development.pdf<br><small>1.0 MB</small></a></td><td>Social Science</td><td><span>Notes</span></td><td>16 May 2024</td><td><a href="#" target="_blank">Preview</a></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="student-bottom-cta"><span>🎧</span><p>Need help finding something? Our support team is here to help with your learning journey.</p><a href="contact.html">Contact Institute →</a></section>
+    </main>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
+

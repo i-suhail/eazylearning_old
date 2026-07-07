@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Easy Learning</title>
+  <meta name="description" content="Admin login page for Easy Learning frontend portal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="login-body admin-login-body">
+  <main class="login-page admin-login-page">
+    <section class="login-shell admin-login-shell reveal">
+      <a href="index.html" class="login-brand" aria-label="Easy Learning home">
+        <img src="assets/images/logo-Navbar.png" alt="Eazylearning Premium Tutoring">
+      </a>
+
+      <div class="login-card admin-login-card">
+        <span class="eyebrow">Admin Portal</span>
+        <h1>Manage Easy Learning.</h1>
+        <p>Frontend access screen for courses, curriculums, classes, enrollments, study materials, gallery, testimonials, and website settings.</p>
+
+        <form class="portal-login-form" action="admin-dashboard.html" method="get">
+          <label>Admin Email <small>*</small><input type="email" name="admin" placeholder="admin@example.com" required></label>
+          <label>Password <small>*</small><input type="password" name="password" placeholder="Enter password" required></label>
+          <label>Role<select name="role"><option>Administrator</option><option>Academic Coordinator</option><option>Content Manager</option></select></label>
+          <button class="btn btn-gold" type="submit">Open Dashboard</button>
+        </form>
+
+        <div class="login-footnote">
+          <a href="student-login.html">Back to Student Login</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+
+      <div class="login-side-panel admin-side-panel">
+        <h2>Admin controls, ready for backend connection later.</h2>
+        <ul>
+          <li>Manage Courses</li>
+          <li>Manage Enrollments</li>
+          <li>Manage Study Materials</li>
+          <li>Manage Gallery</li>
+          <li>Website Settings</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Study Materials | Easy Learning</title>
+  <meta name="description" content="Easy Learning admin study materials management frontend UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-panel-body">
+  <aside class="admin-panel-sidebar">
+    <a href="admin-dashboard.html" class="admin-panel-logo"><img src="assets/images/logo-footer.png" alt="Easy Learning"><span>Admin Panel</span></a>
+    <nav class="admin-panel-nav" aria-label="Admin navigation">
+      <a href="admin-dashboard.html"><span>⌂</span>Dashboard</a>
+      <a href="admin-courses.html"><span>▤</span>Manage Courses & Classes</a>
+      <a href="admin-enrollments.html"><span>♙</span>Manage Enrollments</a>
+      <a class="active" href="admin-study-materials.html"><span>▧</span>Manage Study Materials</a>
+      <a href="admin-website.html"><span>◎</span>Website Management</a>
+      <a class="admin-panel-logout" href="admin-login.html"><span>↪</span>Logout</a>
+    </nav>
+  </aside>
+
+  <div class="admin-panel-page">
+    <header class="admin-panel-topbar"><button class="admin-sidebar-toggle" type="button" aria-label="Open admin menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="admin-top-links"><a href="index.html">Public Pages</a><a href="admin-dashboard.html">Dashboard</a></nav><div class="admin-user-chip"><span></span><div><strong>Welcome, Admin</strong><small>Administrator</small></div></div></header>
+    <main class="admin-panel-main">
+      <section class="admin-page-heading admin-page-heading-row"><div><h1>Manage Study Materials</h1><p>Dashboard › Manage Study Materials</p></div><button class="admin-add-btn admin-open-modal" data-modal="materialUploadModal" type="button">+ Upload New Material</button></section>
+
+      <section class="admin-stat-grid">
+        <article><span class="purple">PF</span><div><p>Total PDFs</p><h2>362</h2><a href="#">View Details →</a></div></article>
+        <article><span class="blue">SB</span><div><p>Total Subjects</p><h2>128</h2><a href="#">View Details →</a></div></article>
+        <article><span class="green">RU</span><div><p>Recent Uploads</p><h2>18</h2><a href="#">View Details →</a></div></article>
+        <article><span class="orange">TD</span><div><p>Total Downloads</p><h2>1,245</h2><a href="#">View Details →</a></div></article>
+      </section>
+
+      <section class="admin-panel-card admin-filter-panel materials-filter-panel">
+        <label>Search Material<input type="search" placeholder="Search by title or keyword..."></label>
+        <label>Curriculum<select><option>All Curriculums</option><option>CBSE</option><option>ICSE</option></select></label>
+        <label>Class<select><option>All Classes</option><option>Class 8</option><option>Class 10</option></select></label>
+        <label>Subject<select><option>All Subjects</option><option>Mathematics</option><option>Science</option></select></label>
+        <label>Material Type<select><option>All Types</option><option>Notes</option><option>Worksheet</option><option>Question Paper</option></select></label>
+        <div class="admin-filter-actions"><button type="button">Reset</button><button type="button" class="primary">Filter</button></div>
+      </section>
+
+      <section class="admin-panel-card admin-table-card admin-wide-table">
+        <div class="admin-card-heading"><h2>Study Materials List</h2><button class="admin-export-btn" type="button">Export</button></div>
+        <table class="admin-table"><thead><tr><th>#</th><th>PDF Title</th><th>Curriculum</th><th>Class</th><th>Subject</th><th>Material Type</th><th>File Size</th><th>Last Updated</th><th>Downloads</th><th>Action</th></tr></thead><tbody>
+          <tr><td>1</td><td><span class="pdf-mark">PDF</span>Mathematics - Algebra Basics</td><td>CBSE</td><td>Class 10</td><td>Mathematics</td><td><span class="admin-badge purple">Notes</span></td><td>1.2 MB</td><td>27 May 2024<br><small>11:30 AM</small></td><td>142</td><td><button class="admin-icon-btn view" type="button" aria-label="View">⌕</button><button class="admin-icon-btn edit admin-open-modal" data-modal="materialUploadModal" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>2</td><td><span class="pdf-mark">PDF</span>Science - Chemical Reactions</td><td>CBSE</td><td>Class 10</td><td>Science</td><td><span class="admin-badge green">Notes</span></td><td>2.4 MB</td><td>26 May 2024<br><small>04:15 PM</small></td><td>98</td><td><button class="admin-icon-btn view" type="button" aria-label="View">⌕</button><button class="admin-icon-btn edit admin-open-modal" data-modal="materialUploadModal" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>3</td><td><span class="pdf-mark">PDF</span>English - Grammar Rules</td><td>ICSE</td><td>Class 9</td><td>English</td><td><span class="admin-badge blue">Worksheet</span></td><td>950 KB</td><td>25 May 2024<br><small>09:20 AM</small></td><td>76</td><td><button class="admin-icon-btn view" type="button" aria-label="View">⌕</button><button class="admin-icon-btn edit admin-open-modal" data-modal="materialUploadModal" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>4</td><td><span class="pdf-mark">PDF</span>Physics - Motion and Force</td><td>CBSE</td><td>Class 9</td><td>Physics</td><td><span class="admin-badge orange">Question Paper</span></td><td>1.8 MB</td><td>24 May 2024<br><small>02:45 PM</small></td><td>63</td><td><button class="admin-icon-btn view" type="button" aria-label="View">⌕</button><button class="admin-icon-btn edit admin-open-modal" data-modal="materialUploadModal" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+          <tr><td>5</td><td><span class="pdf-mark">PDF</span>History - The French Revolution</td><td>State Board</td><td>Class 8</td><td>Social Science</td><td><span class="admin-badge purple">Notes</span></td><td>1.1 MB</td><td>23 May 2024<br><small>10:05 AM</small></td><td>54</td><td><button class="admin-icon-btn view" type="button" aria-label="View">⌕</button><button class="admin-icon-btn edit admin-open-modal" data-modal="materialUploadModal" type="button" aria-label="Edit">✎</button><button class="admin-icon-btn delete" type="button" aria-label="Delete">⌫</button></td></tr>
+        </tbody></table>
+        <div class="admin-table-footer"><span>Showing 1 to 5 of 362 entries</span><div><button>‹</button><button class="active">1</button><button>2</button><button>3</button><button>›</button></div></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="admin-modal" id="materialUploadModal" hidden><div class="admin-modal-box admin-modal-large"><button class="admin-modal-close" type="button" aria-label="Close">×</button><h2>Upload New Material</h2><form class="admin-modal-form material-upload-form"><label>Material Name<input placeholder="Enter PDF/material title"></label><label>Curriculum<select><option>CBSE</option><option>ICSE</option><option>State Board</option></select></label><label>Class<select><option>Class 10</option><option>Class 9</option><option>Class 8</option></select></label><label>Subject<select><option>Mathematics</option><option>Science</option><option>English</option></select></label><label>Document Type<select><option>Notes</option><option>Worksheet</option><option>Question Paper</option><option>Formula Sheet</option></select></label><label>File Upload<input type="file"></label><label class="full">Short Description<textarea placeholder="Briefly describe this material"></textarea></label><button type="button" class="primary">Save Material</button></form></div></div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login | Easy Learning</title>
+  <meta name="description" content="Student login page for Easy Learning frontend portal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="login-body">
+  <main class="login-page student-login-page">
+    <section class="login-shell reveal">
+      <a href="index.html" class="login-brand" aria-label="Easy Learning home">
+        <img src="assets/images/logo-Navbar.png" alt="Eazylearning Premium Tutoring">
+      </a>
+
+      <div class="login-card">
+        <span class="eyebrow">Student Portal</span>
+        <h1>Welcome back, learner.</h1>
+        <p>Access your dashboard, courses, study materials, downloads, announcements, and profile.</p>
+
+        <form class="portal-login-form" action="student-dashboard.html" method="get">
+          <label>Student ID or Email <small>*</small><input type="text" name="student" placeholder="Enter student ID or email" required></label>
+          <label>Password <small>*</small><input type="password" name="password" placeholder="Enter password" required></label>
+          <div class="login-row"><label class="remember-check"><input type="checkbox" name="remember"> Remember me</label><a href="contact.html">Need help?</a></div>
+          <button class="btn btn-primary" type="submit">Sign In</button>
+        </form>
+
+        <div class="login-footnote">
+          <span>New to Easy Learning?</span>
+          <a href="enrollment.html">Join Now</a>
+        </div>
+      </div>
+
+      <div class="login-side-panel">
+        <h2>Everything you need for smarter study.</h2>
+        <ul>
+          <li>My Courses</li>
+          <li>Study Materials</li>
+          <li>Downloads</li>
+          <li>Announcements</li>
+          <li>Profile</li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="admin-corner-link" href="admin-login.html">Admin</a>
+  </main>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

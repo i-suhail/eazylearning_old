@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Easy Learning</title>
+  <meta name="description" content="Easy Learning admin dashboard frontend UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Jost:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&family=Onest:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Righteous&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="admin-panel-body">
+  <aside class="admin-panel-sidebar">
+    <a href="admin-dashboard.html" class="admin-panel-logo"><img src="assets/images/logo-footer.png" alt="Easy Learning"></a>
+    <nav class="admin-panel-nav" aria-label="Admin navigation">
+      <a class="active" href="admin-dashboard.html"><span>⌂</span>Dashboard</a>
+      <a href="admin-courses.html"><span>▤</span>Manage Courses & Classes</a>
+      <a href="admin-enrollments.html"><span>♙</span>Manage Enrollments</a>
+      <a href="admin-study-materials.html"><span>▧</span>Manage Study Materials</a>
+      <a href="admin-website.html"><span>◎</span>Website Management</a>
+      <a class="admin-panel-logout" href="admin-login.html"><span>↪</span>Logout</a>
+    </nav>
+  </aside>
+
+  <div class="admin-panel-page">
+    <header class="admin-panel-topbar"><button class="admin-sidebar-toggle" type="button" aria-label="Open admin menu" aria-expanded="false"><span></span><span></span><span></span></button><nav class="admin-top-links"><a href="index.html">Public Pages</a><a href="admin-dashboard.html" class="active">Dashboard</a></nav><div class="admin-user-chip"><span></span><div><strong>Welcome, Admin</strong><small>Administrator</small></div></div></header>
+    <main class="admin-panel-main">
+      <section class="admin-page-heading"><h1>Dashboard</h1><p>Overview of your institute's activities.</p></section>
+
+      <section class="admin-stat-grid">
+        <article><span class="purple">TS</span><div><p>Total Students</p><h2>1,248</h2></div></article>
+        <article><span class="green">EN</span><div><p>Total Enrollments</p><h2>86</h2></div></article>
+        <article><span class="blue">SM</span><div><p>Study Materials</p><h2>256</h2></div></article>
+        <article><span class="orange">WV</span><div><p>Website Visitors</p><h2>12.4K</h2></div></article>
+      </section>
+
+      <section class="admin-dashboard-grid">
+        <article class="admin-panel-card admin-table-card">
+          <div class="admin-card-heading"><h2>Recent Enrollments</h2><a href="admin-enrollments.html">View All</a></div>
+          <table class="admin-table"><thead><tr><th>Student Name</th><th>Curriculum</th><th>Class</th><th>Mode</th><th>Date</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td>Aarav Sharma</td><td>CBSE</td><td>Class 10</td><td>Online</td><td>27 May 2024</td><td><span class="admin-status confirmed">Confirmed</span></td><td><button>View</button></td></tr><tr><td>Myra Iyer</td><td>ICSE</td><td>Class 9</td><td>Offline</td><td>26 May 2024</td><td><span class="admin-status confirmed">Confirmed</span></td><td><button>View</button></td></tr><tr><td>Rohan Verma</td><td>CBSE</td><td>Class 8</td><td>Online</td><td>25 May 2024</td><td><span class="admin-status pending">Pending</span></td><td><button>View</button></td></tr><tr><td>Sara Khan</td><td>IGCSE</td><td>Class 10</td><td>Online</td><td>24 May 2024</td><td><span class="admin-status confirmed">Confirmed</span></td><td><button>View</button></td></tr><tr><td>Vivaan Patel</td><td>State Board</td><td>Class 11</td><td>Offline</td><td>23 May 2024</td><td><span class="admin-status pending">Pending</span></td><td><button>View</button></td></tr></tbody></table>
+        </article>
+        <article class="admin-panel-card admin-activity-card">
+          <div class="admin-card-heading"><h2>Recent Activities</h2><a href="#">View All</a></div>
+          <div class="admin-activity-list"><article><span class="gold-dot"></span><div><strong>New enrollment received</strong><p>Aarav Sharma submitted enrollment form.</p></div><time>10:23 AM</time></article><article><span class="blue-dot"></span><div><strong>Study material uploaded</strong><p>Mathematics - Linear Equations Notes.</p></div><time>09:48 AM</time></article><article><span class="green-dot"></span><div><strong>Demo request approved</strong><p>Science demo scheduled for Friday.</p></div><time>Yesterday</time></article><article><span class="pink-dot"></span><div><strong>Website details updated</strong><p>Contact details were revised.</p></div><time>2 days ago</time></article></div>
+        </article>
+      </section>
+
+      <section class="admin-panel-card admin-quick-actions"><h2>Quick Actions</h2><div><a href="admin-courses.html">Add Curriculum<span>Create curriculum or class</span></a><a href="admin-study-materials.html">Upload Study Material<span>Upload notes, worksheets, PDFs</span></a><a href="admin-website.html">Manage Website<span>Update contact, gallery, payment</span></a></div></section>
+    </main>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+
+
