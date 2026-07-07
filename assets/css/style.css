@@ -7390,3 +7390,238 @@ Fraunces
     grid-template-columns: 1fr;
   }
 }
+
+/* Global Card Gradient Polish - July 2026 */
+:root {
+  --card-blue-wash: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(247,251,255,0.98) 48%, rgba(232,243,255,0.86) 100%);
+  --card-green-wash: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(250,255,252,0.96) 48%, rgba(226,250,239,0.78) 100%);
+  --card-yellow-wash: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,253,247,0.96) 48%, rgba(255,244,210,0.82) 100%);
+  --card-portal-wash: linear-gradient(135deg, rgba(255,255,255,0.99) 0%, rgba(247,251,255,0.96) 50%, rgba(232,246,255,0.82) 100%);
+  --card-portal-green-wash: linear-gradient(135deg, rgba(255,255,255,0.99) 0%, rgba(248,253,250,0.96) 54%, rgba(226,248,238,0.78) 100%);
+  --card-portal-warm-wash: linear-gradient(135deg, rgba(255,255,255,0.99) 0%, rgba(255,250,250,0.96) 52%, rgba(255,235,235,0.70) 100%);
+}
+
+.hero-note.glass-card {
+  animation: demoFloat 4.4s ease-in-out infinite;
+  background: linear-gradient(135deg, rgba(255,255,255,0.86), rgba(232,243,255,0.66), rgba(230,250,241,0.58));
+  border: 1px solid rgba(255,255,255,0.72);
+  box-shadow: 0 18px 48px rgba(22, 58, 112, 0.18);
+}
+
+@keyframes demoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.home-page .feature-card,
+.home-page .course-card,
+.home-page .step-card,
+.about-page .approach-card,
+.about-page .reason-panel,
+.about-page .method-steps article,
+.about-page {
+  background: var(--card-blue-wash);
+}
+
+.home-page .feature-card:nth-child(even),
+.home-page .course-card:nth-child(even),
+.home-page .step-card:nth-child(even),
+.about-page .reason-panel article:nth-child(even) {
+  background: var(--card-green-wash);
+}
+
+.curriculum-card,
+.class-card,
+.course-benefit,
+.learning-mode-strip article,
+.materials-search,
+.materials-filters,
+.material-card,
+.fee-plan-card,
+.mode-price-card,
+.included-grid article,
+.payment-card {
+  background: var(--card-green-wash);
+}
+
+.curriculum-card:nth-child(odd),
+.class-card:nth-child(odd),
+.course-benefit:nth-child(odd),
+.material-card:nth-child(odd),
+.fee-plan-card:nth-child(odd),
+.mode-price-card:nth-child(odd),
+.included-grid article:nth-child(odd),
+.payment-card:nth-child(odd) {
+  background: var(--card-yellow-wash);
+}
+
+.learning-card,
+.enrollment-form-card,
+.enrollment-summary,
+.gallery-card,
+.testimonial-card,
+.contact-card,
+.contact-form-card,
+.faq-card,
+.login-card {
+  background: var(--card-blue-wash);
+}
+
+.student-welcome-card,
+.student-page-title,
+.student-stat-card,
+.student-panel,
+.student-course-mini,
+.my-course-card,
+.my-courses-filter,
+.portal-material-card,
+.profile-summary-card,
+.profile-info-card,
+.profile-settings-card,
+.portal-download-panel,
+.downloaded-panel {
+  background: var(--card-portal-wash);
+}
+
+.student-panel:nth-of-type(even),
+.student-stat-card:nth-child(even),
+.student-course-mini:nth-child(even),
+.my-course-card:nth-child(even),
+.portal-material-card:nth-child(even),
+.profile-info-card:nth-child(even) {
+  background: var(--card-portal-green-wash);
+}
+
+.admin-stat-grid article,
+.admin-panel-card,
+.admin-management-grid > article,
+.admin-fees-card,
+.website-edit-card,
+.website-gallery-card,
+.website-testimonial-card,
+.website-social-card,
+.admin-filter-panel {
+  background: var(--card-portal-wash);
+}
+
+.admin-stat-grid article:nth-child(even),
+.admin-management-grid > article:nth-child(even),
+.website-lower-grid > article:nth-child(even) {
+  background: var(--card-portal-green-wash);
+}
+
+.admin-stat-grid article:nth-child(4n),
+.portal-material-card:nth-child(4n),
+.my-course-card:nth-child(4n) {
+  background: var(--card-portal-warm-wash);
+}
+
+.feature-card,
+.course-card,
+.step-card,
+.curriculum-card,
+.class-card,
+.course-benefit,
+.learning-card,
+.material-card,
+.fee-plan-card,
+.mode-price-card,
+.payment-card,
+.student-panel,
+.my-course-card,
+.portal-material-card,
+.admin-panel-card,
+.admin-stat-grid article {
+  background-clip: padding-box;
+}
+
+/* Homepage Hologram Card Hover - July 2026 */
+.home-page .feature-card,
+.home-page .course-card,
+.home-page .step-card {
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 420ms ease, box-shadow 420ms ease, border-color 420ms ease;
+  z-index: 0;
+}
+
+.home-page .feature-card > *,
+.home-page .course-card > *,
+.home-page .step-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.home-page .feature-card::before,
+.home-page .course-card::before,
+.home-page .step-card::before {
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 28%,
+    rgba(46, 204, 151, 0.18),
+    rgba(0, 208, 255, 0.30),
+    rgba(245, 181, 18, 0.16),
+    transparent 72%
+  );
+  content: "";
+  height: 210%;
+  left: -60%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: -60%;
+  transform: rotate(-45deg) translateY(-40%);
+  transition: opacity 420ms ease, transform 650ms ease;
+  width: 220%;
+  z-index: 1;
+}
+
+.home-page .feature-card::after,
+.home-page .course-card::after,
+.home-page .step-card::after {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 208, 255, 0.14), transparent 42%);
+  content: "";
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 420ms ease;
+  z-index: 1;
+}
+
+.home-page .feature-card:hover,
+.home-page .course-card:hover,
+.home-page .step-card:hover {
+  border-color: rgba(0, 208, 255, 0.42);
+  box-shadow: 0 18px 44px rgba(0, 208, 255, 0.20), 0 10px 28px rgba(22, 58, 112, 0.12);
+  transform: translateY(-8px) scale(1.025);
+}
+
+.home-page .feature-card:hover::before,
+.home-page .course-card:hover::before,
+.home-page .step-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(96%);
+}
+
+.home-page .feature-card:hover::after,
+.home-page .course-card:hover::after,
+.home-page .step-card:hover::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .feature-card::before,
+  .home-page .course-card::before,
+  .home-page .step-card::before {
+    transition: none;
+  }
+
+  .home-page .feature-card:hover,
+  .home-page .course-card:hover,
+  .home-page .step-card:hover {
+    transform: none;
+  }
+}
