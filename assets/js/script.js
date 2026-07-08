@@ -162,6 +162,7 @@
   const prev = document.getElementById("prevStep");
   const next = document.getElementById("nextStep");
   const submit = document.getElementById("submitEnrollment");
+  const demoSubmit = document.getElementById("bookDemoEnrollment");
   const confirmation = document.getElementById("confirmationBox");
   const params = new URLSearchParams(window.location.search);
   let activeStep = 1;
@@ -277,6 +278,7 @@
     prev.hidden = activeStep === 1;
     next.hidden = activeStep === steps.length;
     submit.hidden = activeStep !== steps.length;
+    if (demoSubmit) demoSubmit.hidden = activeStep !== steps.length;
     updateSummary();
   }
 
@@ -552,3 +554,5 @@
     });
   }
 }());
+
+

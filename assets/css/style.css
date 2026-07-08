@@ -1005,6 +1005,13 @@ Fraunces
   min-height: 290px;
 }
 
+.about-hero-media .image-placeholder img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+} 
+
 .image-placeholder {
   align-items: center;
   background: linear-gradient(135deg, #EAF2FF, #FFFFFF 48%, #FFF7E1);
@@ -1267,6 +1274,12 @@ Fraunces
   width: 188px;
 }
 
+.founder-avatar img {
+  width: 50%;
+  object-fit: cover;
+  display: block;
+}
+
 .founder-section h2 {
   color: var(--gold);
   font-family: "Roboto Slab";
@@ -1460,6 +1473,13 @@ Fraunces
   text-align: center;
 }
 
+.study-illustration img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
 .study-illustration::before {
   background: rgba(22, 58, 112, 0.10);
   border-radius: 28px;
@@ -1547,6 +1567,11 @@ Fraunces
   width: 64px;
 }
 
+.curriculum-card .curriculum-icon img {
+  width:100%;
+  object-fit:cover;
+  display:block;
+}
 .curriculum-card[data-accent="emerald"] .curriculum-icon { background: rgba(46, 204, 151, 0.15); color: #0E8C62; }
 .curriculum-card[data-accent="blue"] .curriculum-icon { background: rgba(53, 103, 210, 0.14); color: #234EB4; }
 .curriculum-card[data-accent="purple"] .curriculum-icon { background: rgba(126, 55, 185, 0.13); color: #7436A5; }
@@ -1755,15 +1780,21 @@ Fraunces
 }
 
 .mini-illustration {
-  align-items: center;
   background: rgba(245, 181, 18, 0.14);
-  border-radius: 16px;
-  color: var(--navy);
   display: flex;
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-  font-weight: 900;
-  height: 92px;
+  align-items: center;
   justify-content: center;
+  height: 92px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.learning-mode-strip .mini-illustration img {
+  /* width:100%; */
+  /* height:100%; */
+  object-fit: cover;
+  display:block;
 }
 
 .learning-mode-strip h3 {
@@ -1919,7 +1950,6 @@ Fraunces
   justify-content: center;
   min-height: 190px;
   overflow: hidden;
-  padding: 24px;
   position: relative;
   text-align: center;
 }
@@ -1951,21 +1981,11 @@ Fraunces
   width: 180px;
 }
 
-.classes-illustration span,
-.classes-illustration small {
-  position: relative;
-  z-index: 1;
-}
-
-.classes-illustration span {
-  font-size: 1.35rem;
-}
-
-.classes-illustration small {
-  color: var(--muted);
-  font-family: "Inter", Arial, sans-serif;
-  font-weight: 800;
-  margin-top: 8px;
+.classes-hero-placeholder img {
+  width:100%;
+  height: 100%;
+  object-fit:cover;
+  /* display:block; */
 }
 
 .classes-modes {
@@ -1999,14 +2019,20 @@ Fraunces
   background: linear-gradient(135deg, rgba(46, 204, 151, 0.14), rgba(255, 255, 255, 0.92));
   border-radius: 18px;
   color: #087F5B;
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 900;
   margin-bottom: 22px;
-  min-height: 138px;
+  height: 138px;
+  overflow: hidden;
+  padding: 0;
 }
 
-.learning-card .learning-visual,
+.learning-card .learning-visual img {
+  /* width:100%; */
+  /* height:100%; */
+  object-fit:cover;
+  display:block;
+}
+
+/* .learning-visuals, */
 .classes-demo-icon {
   align-items: center;
   display: flex;
@@ -2188,12 +2214,18 @@ Fraunces
 
 .classes-demo-icon {
   background: rgba(255, 255, 255, 0.94);
+  border: 2px solid yellow;
   border-radius: 50%;
   color: var(--navy);
   font-family: "Plus Jakarta Sans", Arial, sans-serif;
   font-weight: 900;
   height: 92px;
   width: 92px;
+  overflow: hidden;
+}
+
+.classes-demo-icon img {
+  height: 100%;
 }
 
 .classes-demo-band h2 {
@@ -2710,20 +2742,13 @@ Fraunces
   border: 1px solid rgba(22, 58, 112, 0.12);
   border-radius: 24px;
   box-shadow: var(--soft-shadow);
-  color: var(--navy);
-  display: flex;
-  flex-direction: column;
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-  font-weight: 900;
   height: 170px;
-  justify-content: center;
-  text-align: center;
+  overflow: hidden;
 }
 
-.fee-hero-visual small {
-  color: var(--muted);
-  font-family: "Inter", Arial, sans-serif;
-  margin-top: 6px;
+.fee-hero-visual img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .fee-plans {
@@ -2848,12 +2873,20 @@ Fraunces
   border-radius: 999px;
   color: #087F5B;
   display: inline-flex;
-  font-weight: 900;
   height: 46px;
+  width: 56px;
   justify-content: center;
   margin-bottom: 16px;
-  min-width: 46px;
-  padding: 0 12px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.payment-card span img,
+.mode-price-card span img {
+  height: 90%;
+  /* width: 100%; */
+  /* object-fit: cover; */
+  display:block;
 }
 
 .mode-price-card h3,
@@ -2908,7 +2941,7 @@ Fraunces
   box-shadow: var(--soft-shadow);
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   overflow: hidden;
 }
 
@@ -2932,7 +2965,16 @@ Fraunces
   justify-content: center;
   margin-bottom: 12px;
   width: 42px;
+  overflow: hidden;
 }
+
+.included-grid span img {
+  width:100%;
+  height:100%;
+  /* object-fit: cover; */
+  display:block;
+}
+
 
 .included-grid h3 {
   color: var(--navy);
@@ -3107,26 +3149,14 @@ Fraunces
 }
 
 .materials-hero-art {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 14px;
-  color: var(--navy);
-  display: flex;
-  flex-direction: column;
-  font-family: "Plus Jakarta Sans", Arial, sans-serif;
-  font-size: 1.4rem;
-  font-weight: 900;
   height: 245px;
-  justify-content: center;
-  text-align: center;
+  overflow: hidden;
 }
 
-.materials-hero-art small {
-  color: #315074;
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 0.95rem;
-  margin-top: 8px;
+.material-hero-art span img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .materials-browser {
@@ -4772,7 +4802,7 @@ Fraunces
 .my-courses-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 16px;
 }
 
@@ -4856,10 +4886,13 @@ Fraunces
 
   .student-welcome-card,
   .student-stat-grid,
-  .my-courses-grid,
   .recent-material-row,
   .student-bottom-cta {
     grid-template-columns: 1fr;
+  }
+
+  .my-courses-grid {
+    grid-template-columns: 2fr;
   }
 
   .student-portal-main {
@@ -7623,5 +7656,28 @@ Fraunces
   .home-page .course-card:hover,
   .home-page .step-card:hover {
     transform: none;
+  }
+}
+
+/* Enrollment Final Action Buttons - July 2026 */
+.form-navigation {
+  align-items: center;
+  gap: 14px;
+}
+
+.form-navigation #bookDemoEnrollment,
+.form-navigation #submitEnrollment {
+  min-width: 170px;
+}
+
+.form-navigation .demo-submit-btn {
+  background: linear-gradient(135deg, #163A70, #2A8FBF);
+  color: var(--white);
+}
+
+@media (max-width: 760px) {
+  .form-navigation #bookDemoEnrollment,
+  .form-navigation #submitEnrollment {
+    width: 100%;
   }
 }
