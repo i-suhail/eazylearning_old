@@ -612,22 +612,34 @@ Fraunces
 
 .social-links {
   display: flex;
-  gap: 12px;
-  margin-top: 22px;
+  gap: 6px;
+  margin-top: 12px;
 }
 
 .social-links a {
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  border-radius: 999px;
-  display: inline-flex;
-  font-size: 0.78rem;
-  font-weight: 900;
-  height: 34px;
-  justify-content: center;
   margin: 0;
+  padding: 0;
+  height: 24px;
+  width: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0);
   text-transform: uppercase;
-  width: 34px;
+}
+
+.social-links a img {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  display: block;
+  object-fit: cover;
+}
+
+.social-links a:hover {
+  transition: 0.3s;
+  border: 1px solid var(--gold);
 }
 
 .newsletter-form {
@@ -673,7 +685,7 @@ Fraunces
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   padding-bottom: 22px;
   padding-top: 22px;
 }
@@ -701,17 +713,27 @@ Fraunces
 }
 
 .float-btn {
-  align-items: center;
-  border-radius: 999px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-  color: var(--white);
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 50px;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
   font-size: 0.78rem;
   font-weight: 900;
-  height: 56px;
-  justify-content: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
   transition: transform 0.25s ease;
-  width: 56px;
+  overflow: hidden;
+}
+
+.float-btn img{
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .float-btn:hover {
